@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './PlayerCard.css'
 import Image from 'next/image'
 import image from './blog-post-3.jpeg'

@@ -1,7 +1,8 @@
 "use client"
-import Image from 'next/image'
 import TinderCard from 'react-tinder-card'
 import PlayerCard from "@/app/components/PlayerCard/PlayerCard";
+import Header from "@/app/components/Header/Header";
+import Footer from "@/app/components/Footer/Footer";
 
 export default function Home() {
     const onSwipe = (direction: string) => {
@@ -12,8 +13,15 @@ export default function Home() {
         console.log(myIdentifier + ' left the screen')
     }
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}><PlayerCard/></TinderCard>
-    </main>
+      <div>
+          <main>
+              <header><Header/></header>
+              <div className="flex bg-black min-h-screen flex-col items-center justify-between p-20">
+              <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}><PlayerCard/></TinderCard>
+      </div>
+          <footer><Footer/></footer></main>
+      </div>
+
+
   )
 }
