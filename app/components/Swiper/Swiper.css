@@ -1,4 +1,5 @@
 .cardContainer {
+
 }
 .swipe {
     border-radius: 1rem;
@@ -7,6 +8,7 @@
 }
 .textbox {
     background-color: white;
+    color: black;
     height: 2rem;
     border-radius: 0rem 0rem 1rem 1rem;
 }
@@ -19,3 +21,24 @@
 .card {
     text-align: center;
 }
+.frontStyle {
+    width: 18rem;
+    height: 24rem;
+}
+.backStyle {
+    width: 18rem;
+    height: 24rem;
+}
+
+.myflip {
+    width: 18rem;
+    height: 24rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+

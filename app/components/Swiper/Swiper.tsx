@@ -3,6 +3,8 @@ import TinderCard from 'react-tinder-card'
 import img from './profile.jpeg'
 import Image from "next/image";
 import './Swiper.css';
+import PlayerCard from "@/app/components/PlayerCard/PlayerCard";
+import ReactFlipCard from "reactjs-flip-card";
 
 const db = [
     {
@@ -26,21 +28,31 @@ function Simple () {
     }
 
     return (
-        <div>
+        <div className={"app"}>
             <link href='https://fonts.googleapis.com/css?family=Damion&display=swap' rel='stylesheet' />
             <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
             <div className='cardContainer'>
                 {characters.map((character) =>
                     <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
-                        <div className='card'>
+                        {/*<div className='card'>
                             <Image className={"image"} src={img} alt={"test"}/>
                             <h3 className={"textbox"}>{character.name}</h3>
-                        </div>
+                        </div>*/}
+                        <ReactFlipCard
+                            flipCardCss={"myflip"}
+                            frontCss={'frontStyle'}
+                            backCss={'backStyle'}
+                            direction={"diagonal"}
+                            flipTrigger={"onClick"}
+                            frontComponent={<PlayerCard/>}
+                            backComponent={<PlayerCard/>}
+                        />
+
                     </TinderCard>
                 )}
             </div>
             {lastDirection ? <h2 className='text-center infoText bg-white'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
-        </div>
+           </div>
     )
 }
 
