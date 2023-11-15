@@ -15,12 +15,11 @@ export default function Home() {
     }
   return (
       <div>
-          <main>
-              <header><Header/></header>
-              <div className="flex bg-black min-h-screen flex-col items-center justify-between p-20 overflow-hidden">
+          <main><Header/>
+              {/*<div className="flex bg-black min-h-screen flex-col items-center justify-between p-20 overflow-hidden">
                   <Swiper/>
               </div>
-          <footer><Footer/></footer></main>
+          <footer><Footer/></footer>*/}</main>
       </div>
 
 

@@ -38,16 +38,8 @@ function Simple () {
                             <Image className={"image"} src={img} alt={"test"}/>
                             <h3 className={"textbox"}>{character.name}</h3>
                         </div>*/}
-                        <ReactFlipCard
-                            flipCardCss={"myflip"}
-                            frontCss={'frontStyle'}
-                            backCss={'backStyle'}
-                            direction={"diagonal"}
-                            flipTrigger={"onClick"}
-                            frontComponent={<PlayerCard/>}
-                            backComponent={<PlayerCard/>}
-                        />
 
+                        <PlayerCard/>
                     </TinderCard>
                 )}
             </div>
