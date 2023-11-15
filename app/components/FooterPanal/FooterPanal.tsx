@@ -18,7 +18,6 @@ export default function IconTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="icon tabs example">
             <Tab icon={<FavoriteIcon />} aria-label="favorite" />
             <Tab icon={<ChatBubbleIcon/>} aria-label="chat" />
-            <Tab icon={<PersonPinIcon />} aria-label="person" />
             <Tab icon={<SettingsIcon />} aria-label="settings" />
         </Tabs>
     );

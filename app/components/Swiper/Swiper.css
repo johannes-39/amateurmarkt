@@ -1,0 +1,21 @@
+.cardContainer {
+}
+.swipe {
+    border-radius: 1rem;
+    width: 18rem;
+    height: 24rem;
+}
+.textbox {
+    background-color: white;
+    height: 2rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+.image {
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 22rem;
+    width: 18rem;
+    object-fit: cover;
+}
+.card {
+    text-align: center;
+}
