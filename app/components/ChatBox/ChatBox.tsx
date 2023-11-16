@@ -20,8 +20,7 @@ import './ChatBox.css'
 
 
 // @ts-ignore
-export default function ChatBox({open, setOpen, handleClose}) {
-    console.log(open);
+export default function ChatBox({open, handleClose}) {
 
 
     useEffect(() => {
@@ -30,7 +29,6 @@ export default function ChatBox({open, setOpen, handleClose}) {
             .then(json => console.log(json.body))
     }, []);
 
-    console.log(open);
 
     return (
         <React.Fragment>

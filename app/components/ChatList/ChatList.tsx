@@ -42,7 +42,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
-                <ChatBox open={open} setOpen={setOpen} handleClose={handleClose}/>
+                <ChatBox open={open} handleClose={handleClose}/>
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">
@@ -87,7 +87,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
-            <ChatBox open={open} setOpen={setOpen} handleClose={handleClose}/>
+            <ChatBox open={open} handleClose={handleClose}/>
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">
