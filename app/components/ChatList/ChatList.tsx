@@ -21,8 +21,8 @@ export default function ChatList() {
     }
     return (
         <Box sx={{ maxHeight: '30rem', overflow: 'auto'}}>
-        <List onClick={handleOpen} sx={{ width: '22rem', bgcolor: 'background.paper' }}>
-            <ListItem alignItems="flex-start">
+        <List sx={{ width: '22rem', bgcolor: 'background.paper' }}>
+            <ListItem onClick={handleOpen} alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt="Remy Sharp" />
                 </ListItemAvatar>
