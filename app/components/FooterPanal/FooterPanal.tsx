@@ -12,6 +12,7 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import Swiper from "@/app/components/Swiper/Swiper";
 import Settings from "@/app/pages/settingspage/settings";
 import './FooterPanal.css'
+import Chat from "@/app/pages/chatpage/chat";
 
 const IconTabs:React.FC<any> =  () => {
     const data = [
@@ -25,7 +26,7 @@ const IconTabs:React.FC<any> =  () => {
         },
         {
             label: "",
-            value: "profile",
+            value: "chat",
             icon: ChatBubbleIcon,
             desc: `Because it's about motivating the doers. Because I'm here
       to follow my dreams and inspire other people to follow their dreams, too.`,
@@ -51,7 +52,7 @@ const IconTabs:React.FC<any> =  () => {
                     <Swiper/>
                 </TabPanel>
                 <TabPanel key={"chat"} value={"chat"}>
-                    <h2>test</h2>
+                    <Chat/>
                 </TabPanel>
                 <TabPanel key={"settings"} value={"settings"}>
                     <Settings/>
