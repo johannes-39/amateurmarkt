@@ -13,6 +13,7 @@ import Swiper from "@/app/components/Swiper/Swiper";
 import Settings from "@/app/pages/settingspage/settings";
 import './FooterPanal.css'
 import Chat from "@/app/pages/chatpage/chat";
+import SignIn from "@/app/pages/signin/signin";
 
 const IconTabs:React.FC<any> =  () => {
     const data = [
@@ -52,7 +53,7 @@ const IconTabs:React.FC<any> =  () => {
                     <Swiper/>
                 </TabPanel>
                 <TabPanel key={"chat"} value={"chat"}>
-                    <Chat/>
+                    <SignIn/>
                 </TabPanel>
                 <TabPanel key={"settings"} value={"settings"}>
                     <Settings/>
