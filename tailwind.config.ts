@@ -1,6 +1,11 @@
 import type { Config } from 'tailwindcss'
 import withMT from "@material-tailwind/react/utils/withMT";
 
+module.exports = {
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
+  plugins: [require('daisyui')],
+};
+
 module.exports = withMT({
   content: ["./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -24,6 +29,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require("daisyui")],
 }
 export default config

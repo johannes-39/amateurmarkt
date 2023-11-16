@@ -7,11 +7,18 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Box from "@mui/material/Box";
+import ChatBox from "@/app/components/ChatBox/ChatBox";
 
 export default function ChatList() {
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    }
     return (
         <Box sx={{ maxHeight: '30rem', overflow: 'auto'}}>
-        <List sx={{ width: '22rem', bgcolor: 'background.paper' }}>
+        <List onClick={handleOpen} sx={{ width: '22rem', bgcolor: 'background.paper' }}>
             <ListItem alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt="Remy Sharp" />
@@ -32,6 +39,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
+                <ChatBox open={open} setOpen={setOpen}/>
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">
@@ -56,7 +64,7 @@ export default function ChatList() {
                 />
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
+            <ListItem onClick={handleOpen} alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt="Cindy Baker"/>
                 </ListItemAvatar>
@@ -76,6 +84,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
+            <ChatBox open={open} setOpen={setOpen}/>
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">

@@ -1,0 +1,61 @@
+.chatstart {
+    display: flex;
+    margin: 0.5rem 1rem;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 14rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: blue;
+    color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+.mymessage {
+    display: flex;
+    margin: 0.5rem 1rem;
+    justify-content: flex-end;
+
+}
+.chatend {
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 14rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: #b5b5b6;
+    color: #000000;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.inputArea {
+    position: fixed;
+    bottom: 0;
+    height: 5rem;
+    width:100%;
+    box-shadow: 10px 5px 15px rgba(0.3, 0.3, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
+.messageField {
+    width: 80%;
+    max-width: 30rem;
+    height: 3rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    transition: 0.4s linear;
+    margin-left: 3%;
+
+}
+.chatcomp {
+    margin-bottom: 5rem;
+    height: 100%;
+    overflow: auto;
+    flex-direction: column-reverse;
+
+}
+.messageField:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
