@@ -1,34 +1,4 @@
-.chatstart {
-    display: flex;
-    margin: 0.5rem 1rem;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 14rem;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem 1rem 1rem 0rem;
-    background-color: blue;
-    color: white;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 
-}
-.mymessage {
-    display: flex;
-    margin: 0.5rem 1rem;
-    justify-content: flex-end;
-
-}
-.chatend {
-    display: flex;
-    text-align: right;
-    justify-content: flex-end;
-    width: 100%;
-    max-width: 14rem;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem 1rem 0rem 1rem;
-    background-color: #b5b5b6;
-    color: #000000;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
 .inputArea {
     position: fixed;
     bottom: 0;

@@ -10,20 +10,24 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import SendIcon from '@mui/icons-material/Send';
 import './ChatBox.css'
+import {json} from "stream/consumers";
+import Message from "@/app/components/Message/Message";
 
 
 
 // @ts-ignore
-export default function ChatBox({open, handleClose}) {
+export default function ChatBox({user, open, handleClose}) {
+
+    const [ body, setBody ] = useState('');
 
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/comments/1')
+        fetch('https://jsonplaceholder.typicode.com/comments/2')
             .then(response => response.json())
-            .then(json => console.log(json.body))
+            .then(json => setBody(json.name))
     }, []);
 
 
@@ -41,63 +45,18 @@ export default function ChatBox({open, handleClose}) {
                     </IconButton>
                 </div>
                 <div className={"chatcomp"}>
-                    <div className="chatstart">
-                        <div className="chat-bubble">Its over Anakin, <br/>I have the high ground.</div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
-                    <div className="chatstart">
-                        <div className="chat-bubble">its over Anakin, I have the high ground.</div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
-                    <div className="chatstart">
-                        <div className="chat-bubble">Its over Anakin, <br/>I have the high ground.</div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
-                    <div className="chatstart">
-                        <div className="chat-bubble">Its over Anakin, <br/>I have the high ground.</div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
-                    <div className={"mymessage"}>
-                        <div className="chatend">
-                            <div className="chat-bubble">You underestimate my power!</div>
-                        </div>
-                    </div>
+                    <Message me={true} content={body}/>
+                    <Message me={false} content={body}/>
+                    <Message me={false} content={body}/>
+                    <Message me={true} content={body}/>
+                    <Message me={true} content={body}/>
+                    <Message me={false} content={body}/>
+                    <Message me={false} content={body}/>
+                    <Message me={true} content={body}/>
+                    <Message me={true} content={body}/>
+                    <Message me={false} content={body}/>
+                    <Message me={false} content={body}/>
+                    <Message me={true} content={body}/>
                 </div>
 
 
