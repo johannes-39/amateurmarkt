@@ -21,7 +21,7 @@ export default function SettingsList() {
 
     return (
         <List
-            sx={{ width: '100%', minWidth: '18rem', maxWidth: 360, bgcolor: 'white' }}
+            sx={{ width: '22rem', bgcolor: 'white' }}
             component="nav"
             aria-labelledby="nested-list-subheader"
             subheader={

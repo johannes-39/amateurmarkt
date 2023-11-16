@@ -42,8 +42,10 @@ const IconTabs:React.FC<any> =  () => {
         },
     ];
     return (
+        <div className={"content"}>
         <Tabs value="swiper">
             <TabsBody
+                className={"mybody"}
                 animate={{
                     initial: { y: 250 },
                     mount: { y: 0 },
@@ -70,6 +72,7 @@ const IconTabs:React.FC<any> =  () => {
                 ))}
             </TabsHeader>
         </Tabs>
+        </div>
     );
 }
 export default IconTabs;
