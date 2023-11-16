@@ -17,8 +17,8 @@ function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
+            <Link color="inherit" href="https://google.com">
+                Amateurmarkt
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -29,7 +29,8 @@ function Copyright(props: any) {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function SignIn() {
+// @ts-ignore
+export default function SignIn({close}) {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -41,7 +42,7 @@ export default function SignIn() {
 
     return (
         <ThemeProvider theme={defaultTheme}>
-            <Container component="main" maxWidth="xs" sx={{bgcolor: 'white', py: '0.5rem', borderRadius: '1rem'}}>
+            <Container component="main" maxWidth="xs">
                 <CssBaseline />
                 <Box
                     sx={{
@@ -83,10 +84,11 @@ export default function SignIn() {
                             label="Remember me"
                         />
                         <Button
+                            onClick={close}
                             type="submit"
                             fullWidth
                             variant="contained"
-                            sx={{ mt: 3, mb: 2 }}
+                            sx={{color:'black', mt: 3, mb: 2 }}
                         >
                             Sign In
                         </Button>
