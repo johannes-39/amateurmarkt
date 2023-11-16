@@ -12,6 +12,9 @@ import ChatBox from "@/app/components/ChatBox/ChatBox";
 export default function ChatList() {
 
     const [open, setOpen] = React.useState(false);
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const handleOpen = () => {
         setOpen(true);
@@ -39,7 +42,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
-                <ChatBox open={open} setOpen={setOpen}/>
+                <ChatBox open={open} setOpen={setOpen} handleClose={handleClose}/>
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">
@@ -84,7 +87,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
-            <ChatBox open={open} setOpen={setOpen}/>
+            <ChatBox open={open} setOpen={setOpen} handleClose={handleClose}/>
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">

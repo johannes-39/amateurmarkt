@@ -20,17 +20,17 @@ import './ChatBox.css'
 
 
 // @ts-ignore
-export default function ChatBox({open, setOpen}) {
+export default function ChatBox({open, setOpen, handleClose}) {
+    console.log(open);
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/comments/1')
             .then(response => response.json())
             .then(json => console.log(json.body))
     }, []);
 
+    console.log(open);
 
     return (
         <React.Fragment>
@@ -38,8 +38,13 @@ export default function ChatBox({open, setOpen}) {
                 sx={{zIndex: 2000000000}}
                 fullScreen
                 open={open}
-                onClose={handleClose}
             >
+                <div className={"bar"}>
+                    <IconButton onClick={handleClose} sx={{marginLeft: '1rem'}}>
+                        <CloseIcon/>
+
+                    </IconButton>
+                </div>
                 <div className={"chatcomp"}>
                     <div className="chatstart">
                         <div className="chat-bubble">It's over Anakin, <br/>I have the high ground.</div>
