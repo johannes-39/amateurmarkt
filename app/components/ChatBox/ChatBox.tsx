@@ -10,9 +10,6 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
-import Slide from '@mui/material/Slide';
-import { TransitionProps } from '@mui/material/transitions';
-import SignIn from "@/app/pages/signin/signin";
 import {useEffect} from "react";
 import SendIcon from '@mui/icons-material/Send';
 import './ChatBox.css'
@@ -45,7 +42,7 @@ export default function ChatBox({open, handleClose}) {
                 </div>
                 <div className={"chatcomp"}>
                     <div className="chatstart">
-                        <div className="chat-bubble">It's over Anakin, <br/>I have the high ground.</div>
+                        <div className="chat-bubble">Its over Anakin, <br/>I have the high ground.</div>
                     </div>
                     <div className={"mymessage"}>
                         <div className="chatend">
@@ -53,7 +50,7 @@ export default function ChatBox({open, handleClose}) {
                         </div>
                     </div>
                     <div className="chatstart">
-                        <div className="chat-bubble">It's over Anakin, <br/>I have the high ground.</div>
+                        <div className="chat-bubble">its over Anakin, I have the high ground.</div>
                     </div>
                     <div className={"mymessage"}>
                         <div className="chatend">
@@ -61,7 +58,7 @@ export default function ChatBox({open, handleClose}) {
                         </div>
                     </div>
                     <div className="chatstart">
-                        <div className="chat-bubble">It's over Anakin, <br/>I have the high ground.</div>
+                        <div className="chat-bubble">Its over Anakin, <br/>I have the high ground.</div>
                     </div>
                     <div className={"mymessage"}>
                         <div className="chatend">
@@ -69,7 +66,7 @@ export default function ChatBox({open, handleClose}) {
                         </div>
                     </div>
                     <div className="chatstart">
-                        <div className="chat-bubble">It's over Anakin, <br/>I have the high ground.</div>
+                        <div className="chat-bubble">Its over Anakin, <br/>I have the high ground.</div>
                     </div>
                     <div className={"mymessage"}>
                         <div className="chatend">
