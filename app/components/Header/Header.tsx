@@ -6,6 +6,9 @@ import IconTabs from "@/app/components/FooterPanal/FooterPanal";
 const Header:React.FC<any> =  () => {
     return (
         <div className={'div'}>
+            <div className={"realHeader"}>
+                <Image className={"myimg"} src={image} alt={"profile"}/>
+            </div>
             <div className={'div2'}>
                 <IconTabs/>
             </div>

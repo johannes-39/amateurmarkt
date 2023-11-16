@@ -1,39 +1,68 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-import Swiper from "@/app/components/Swiper/Swiper";
+import React from "react";
+import {
+    Tabs,
+    TabsHeader,
+    TabsBody,
+    Tab,
+    TabPanel,
+} from "@material-tailwind/react";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import Swiper from "@/app/components/Swiper/Swiper";
 import Settings from "@/app/pages/settingspage/settings";
+import './FooterPanal.css'
 
-export default function IconTabs() {
-    const [value, setValue] = React.useState('1');
-
-    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-        setValue(newValue);
-    };
-
-
-
+const IconTabs:React.FC<any> =  () => {
+    const data = [
+        {
+            label: "",
+            value: "swiper",
+            icon: FavoriteIcon,
+            desc: `It really matters and then like it really doesn't matter.
+      What matters is the people who are sparked by it. And the people
+      who are like offended by it, it doesn't matter.`,
+        },
+        {
+            label: "",
+            value: "profile",
+            icon: ChatBubbleIcon,
+            desc: `Because it's about motivating the doers. Because I'm here
+      to follow my dreams and inspire other people to follow their dreams, too.`,
+        },
+        {
+            label: "",
+            value: "settings",
+            icon: SettingsIcon,
+            desc: `We're not always in the position that we want to be at.
+      We're constantly growing. We're constantly making mistakes. We're
+      constantly trying to express ourselves and actualize our dreams.`,
+        },
+    ];
     return (
-        <Box sx={{position: 'fixed', width: '100%', typography: 'body1' }}>
-            <TabContext  value={value}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList sx={{height: '4rem'}} variant="fullWidth" onChange={handleChange} aria-label="lab API tabs example">
-                        <Tab sx={{height: '4rem'}} icon={<FavoriteIcon />} aria-label="favorite" value={"1"}/>
-                        <Tab sx={{height: '4rem'}} icon={<ChatBubbleIcon/>} aria-label="chat" value={"2"}/>
-                        <Tab sx={{height: '4rem'}} icon={<SettingsIcon />} aria-label="settings" value={"3"}/>
-                    </TabList>
-                </Box>
-                <TabPanel sx={{display: 'flex', justifyContent: 'center'}} value="1"><Swiper/></TabPanel>
-                <TabPanel value="2">Item Three</TabPanel>
-                <TabPanel sx={{display: 'flex', justifyContent: 'center'}} value="3"><Settings/></TabPanel>
-
-            </TabContext>
-        </Box>
+        <Tabs value="swiper">
+            <TabsBody>
+                <TabPanel key={"swiper"} value={"swiper"}>
+                    <Swiper/>
+                </TabPanel>
+                <TabPanel key={"chat"} value={"chat"}>
+                    <h2>test</h2>
+                </TabPanel>
+                <TabPanel key={"settings"} value={"settings"}>
+                    <Settings/>
+                </TabPanel>
+            </TabsBody>
+            <TabsHeader className={"tabheader"}>
+                {data.map(({ label, value, icon }) => (
+                    <Tab key={value} value={value}>
+                        <div className="flex items-center gap-2">
+                            {React.createElement(icon, { className: "w-5 h-5" })}
+                            {label}
+                        </div>
+                    </Tab>
+                ))}
+            </TabsHeader>
+        </Tabs>
     );
 }
+export default IconTabs;

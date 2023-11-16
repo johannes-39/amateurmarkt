@@ -1,4 +1,13 @@
 import type { Config } from 'tailwindcss'
+import withMT from "@material-tailwind/react/utils/withMT";
+
+module.exports = withMT({
+  content: ["./pages/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+})
 
 const config: Config = {
   content: [
@@ -15,6 +24,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 }
 export default config

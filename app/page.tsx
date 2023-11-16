@@ -4,6 +4,7 @@ import PlayerCard from "@/app/components/PlayerCard/PlayerCard";
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
 import Swiper from "@/app/components/Swiper/Swiper";
+import IconTabs from "@/app/components/FooterPanal/FooterPanal";
 
 export default function Home() {
     const onSwipe = (direction: string) => {

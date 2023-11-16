@@ -1,0 +1,27 @@
+.mytabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mytabsbox {
+    width: 18rem;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+}
+.tabsbox {
+}
+.tabscomp {
+    background-color: transparent;
+}
+.tabpanal {
+    width: 18rem;
+}
+.tabheader {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1rem;
+    height: 4rem;
+    width: 80%;
+    left: 10%;
+}
