@@ -53,7 +53,7 @@ const IconTabs:React.FC<any> =  () => {
                     <Swiper/>
                 </TabPanel>
                 <TabPanel key={"chat"} value={"chat"}>
-                    <SignIn/>
+                    <Chat/>
                 </TabPanel>
                 <TabPanel key={"settings"} value={"settings"}>
                     <Settings/>
