@@ -1,0 +1,8 @@
+.chatItem {
+}
+.chatItem:active {
+    background-color: aliceblue;
+}
+.chatItem:hover {
+    background-color: aliceblue;
+}

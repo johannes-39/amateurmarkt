@@ -11,6 +11,15 @@ import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LockIcon from '@mui/icons-material/Lock';
+import ShieldIcon from '@mui/icons-material/Shield';
+import DeleteIcon from '@mui/icons-material/Delete';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import PaymentIcon from '@mui/icons-material/Payment';
+import ReplayIcon from '@mui/icons-material/Replay';
+import LogoutIcon from '@mui/icons-material/Logout';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function SettingsList() {
     const [open, setOpen] = React.useState(true);
@@ -27,85 +36,73 @@ export default function SettingsList() {
         >
             <ListItemButton>
                 <ListItemIcon>
-                    <SendIcon />
+                    <AccountCircleIcon/>
                 </ListItemIcon>
-                <ListItemText primary="Sent mail" />
+                <ListItemText primary="Profil" />
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon>
-                    <DraftsIcon />
+                    <LockIcon />
                 </ListItemIcon>
-                <ListItemText primary="Drafts" />
+                <ListItemText primary="Privatsphäre" />
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon>
-                    <SendIcon />
+                    <ShieldIcon />
                 </ListItemIcon>
-                <ListItemText primary="Sent mail" />
+                <ListItemText primary="Sicherheit" />
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon>
-                    <DraftsIcon />
+                    <PaymentIcon />
                 </ListItemIcon>
-                <ListItemText primary="Drafts" />
+                <ListItemText primary="Zahlungsmethoden" />
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon>
-                    <SendIcon />
+                    <QueryStatsIcon />
                 </ListItemIcon>
-                <ListItemText primary="Sent mail" />
+                <ListItemText primary="Statistik" />
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon>
-                    <DraftsIcon />
+                    <DeleteIcon/>
                 </ListItemIcon>
-                <ListItemText primary="Drafts" />
+                <ListItemText primary="Account löschen" />
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon>
-                    <SendIcon />
+                    <ReplayIcon />
                 </ListItemIcon>
-                <ListItemText primary="Sent mail" />
+                <ListItemText primary="Account wiederherstellen" />
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon>
-                    <DraftsIcon />
+                    <LogoutIcon />
                 </ListItemIcon>
-                <ListItemText primary="Drafts" />
+                <ListItemText primary="Ausloggen" />
             </ListItemButton>
-            <ListItemButton>
-                <ListItemIcon>
-                    <SendIcon />
-                </ListItemIcon>
-                <ListItemText primary="Sent mail" />
-            </ListItemButton>
-            <ListItemButton>
-                <ListItemIcon>
-                    <DraftsIcon />
-                </ListItemIcon>
-                <ListItemText primary="Drafts" />
-            </ListItemButton>
-            <ListItemButton>
-                <ListItemIcon>
-                    <SendIcon />
-                </ListItemIcon>
-                <ListItemText primary="Sent mail" />
-            </ListItemButton>
-            <ListItemButton>
-                <ListItemIcon>
-                    <DraftsIcon />
-                </ListItemIcon>
-                <ListItemText primary="Drafts" />
-            </ListItemButton>
+
             <ListItemButton onClick={handleClick}>
                 <ListItemIcon>
-                    <InboxIcon />
                 </ListItemIcon>
-                <ListItemText primary="Inbox" />
+                <ListItemText primary="Weitere Einstellungen" />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
+                    <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon>
+                            <StarBorder />
+                        </ListItemIcon>
+                        <ListItemText primary="Starred" />
+                    </ListItemButton>
+                    <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon>
+                            <StarBorder />
+                        </ListItemIcon>
+                        <ListItemText primary="Starred" />
+                    </ListItemButton>
                     <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon>
                             <StarBorder />

@@ -8,6 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Box from "@mui/material/Box";
 import ChatBox from "@/app/components/ChatBox/ChatBox";
+import './ChatList.css';
 
 export default function ChatList() {
 
@@ -19,8 +20,123 @@ export default function ChatList() {
     }
     return (
         <Box sx={{ maxHeight: '30rem', overflow: 'auto'}}>
-        <List sx={{ width: '22rem', bgcolor: 'background.paper' }}>
-            <ListItem onClick={handleOpen} alignItems="flex-start">
+        <List  sx={{ width: '22rem', bgcolor: 'background.paper' }}>
+            <ListItem className={"chatItem"} onClick={handleOpen} alignItems="flex-start">
+                <ListItemAvatar>
+                    <Avatar alt="Remy Sharp" />
+                </ListItemAvatar>
+                <ListItemText
+                    primary="Johannes Städtler"
+                    secondary={
+                        <React.Fragment>
+                            <Typography
+                                sx={{ display: 'inline' }}
+                                component="span"
+                                variant="body2"
+                                color="text.primary"
+                            >
+                                Ali Connors
+                            </Typography>
+                            {" — I'll be in your neighborhood doing errands this…"}
+                        </React.Fragment>
+                    }
+                />
+                <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            <ListItem className={"chatItem"} onClick={handleOpen} alignItems="flex-start">
+                <ListItemAvatar>
+                    <Avatar alt="Remy Sharp" />
+                </ListItemAvatar>
+                <ListItemText
+                    primary="Philipp Müller"
+                    secondary={
+                        <React.Fragment>
+                            <Typography
+                                sx={{ display: 'inline' }}
+                                component="span"
+                                variant="body2"
+                                color="text.primary"
+                            >
+                                Ali Connors
+                            </Typography>
+                            {" — I'll be in your neighborhood doing errands this…"}
+                        </React.Fragment>
+                    }
+                />
+                <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            <ListItem className={"chatItem"} onClick={handleOpen} alignItems="flex-start">
+                <ListItemAvatar>
+                    <Avatar alt="Test Nutzer" />
+                </ListItemAvatar>
+                <ListItemText
+                    primary="Test Nutzer"
+                    secondary={
+                        <React.Fragment>
+                            <Typography
+                                sx={{ display: 'inline' }}
+                                component="span"
+                                variant="body2"
+                                color="text.primary"
+                            >
+                                Ali Connors
+                            </Typography>
+                            {" — I'll be in your neighborhood doing errands this…"}
+                        </React.Fragment>
+                    }
+                />
+                <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            <ListItem className={"chatItem"} onClick={handleOpen} alignItems="flex-start">
+                <ListItemAvatar>
+                    <Avatar alt="Remy Sharp" />
+                </ListItemAvatar>
+                <ListItemText
+                    primary="Max Mustermann"
+                    secondary={
+                        <React.Fragment>
+                            <Typography
+                                sx={{ display: 'inline' }}
+                                component="span"
+                                variant="body2"
+                                color="text.primary"
+                            >
+                                Ali Connors
+                            </Typography>
+                            {" — I'll be in your neighborhood doing errands this…"}
+                        </React.Fragment>
+                    }
+                />
+                <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            <ListItem className={"chatItem"} onClick={handleOpen} alignItems="flex-start">
+                <ListItemAvatar>
+                    <Avatar alt="Remy Sharp" />
+                </ListItemAvatar>
+                <ListItemText
+                    primary="Hallo Welt"
+                    secondary={
+                        <React.Fragment>
+                            <Typography
+                                sx={{ display: 'inline' }}
+                                component="span"
+                                variant="body2"
+                                color="text.primary"
+                            >
+                                Ali Connors
+                            </Typography>
+                            {" — I'll be in your neighborhood doing errands this…"}
+                        </React.Fragment>
+                    }
+                />
+                <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            <ListItem className={"chatItem"} onClick={handleOpen} alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt="Remy Sharp" />
                 </ListItemAvatar>
@@ -43,52 +159,7 @@ export default function ChatList() {
                 <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                    <Avatar alt="Travis Howard"/>
-                </ListItemAvatar>
-                <ListItemText
-                    primary="Summer BBQ"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                to Scott, Alex, Jennifer
-                            </Typography>
-                            {" — Wish I could come, but I'm out of town this…"}
-                        </React.Fragment>
-                    }
-                />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem onClick={handleOpen} alignItems="flex-start">
-                <ListItemAvatar>
-                    <Avatar alt="Cindy Baker"/>
-                </ListItemAvatar>
-                <ListItemText
-                    primary="Oui Oui"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                Sandra Adams
-                            </Typography>
-                            {' — Do you have Paris recommendations? Have you ever…'}
-                        </React.Fragment>
-                    }
-                />
-            <ChatBox user={"testuser"} open={open} handleOpen={handleOpen}/>
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
+            <ListItem className={"chatItem"} onClick={handleOpen} alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt="Remy Sharp" />
                 </ListItemAvatar>
@@ -108,97 +179,10 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
+                <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                    <Avatar alt="Travis Howard"/>
-                </ListItemAvatar>
-                <ListItemText
-                    primary="Summer BBQ"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                to Scott, Alex, Jennifer
-                            </Typography>
-                            {" — Wish I could come, but I'm out of town this…"}
-                        </React.Fragment>
-                    }
-                />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                    <Avatar alt="Cindy Baker"/>
-                </ListItemAvatar>
-                <ListItemText
-                    primary="Oui Oui"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                Sandra Adams
-                            </Typography>
-                            {' — Do you have Paris recommendations? Have you ever…'}
-                        </React.Fragment>
-                    }
-                />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                    <Avatar alt="Travis Howard"/>
-                </ListItemAvatar>
-                <ListItemText
-                    primary="Summer BBQ"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                to Scott, Alex, Jennifer
-                            </Typography>
-                            {" — Wish I could come, but I'm out of town this…"}
-                        </React.Fragment>
-                    }
-                />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                    <Avatar alt="Cindy Baker"/>
-                </ListItemAvatar>
-                <ListItemText
-                    primary="Oui Oui"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                Sandra Adams
-                            </Typography>
-                            {' — Do you have Paris recommendations? Have you ever…'}
-                        </React.Fragment>
-                    }
-                />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
+            <ListItem className={"chatItem"} onClick={handleOpen} alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt="Remy Sharp" />
                 </ListItemAvatar>
@@ -218,28 +202,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                    <Avatar alt="Travis Howard"/>
-                </ListItemAvatar>
-                <ListItemText
-                    primary="Summer BBQ"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                to Scott, Alex, Jennifer
-                            </Typography>
-                            {" — Wish I could come, but I'm out of town this…"}
-                        </React.Fragment>
-                    }
-                />
+                <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
             </ListItem>
         </List>
         </Box>
