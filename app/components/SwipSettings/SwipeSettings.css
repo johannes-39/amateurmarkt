@@ -1,0 +1,12 @@
+.settingsbox {
+    position: fixed;
+    color: #000;
+    right: 1rem;
+}
+.mydialog {
+    position: fixed;
+    width: 100%;
+    height: 20rem;
+    color: white;
+    background-color: #000;
+}
