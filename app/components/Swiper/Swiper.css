@@ -1,10 +1,11 @@
 .cardContainer {
-
 }
 .swipe {
     border-radius: 1rem;
-    width: 22rem;
+    width: 100%;
     height: 30rem;
+    position: fixed;
+    left: 0;
 }
 .card {
     text-align: center;

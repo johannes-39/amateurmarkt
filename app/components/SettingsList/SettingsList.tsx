@@ -21,15 +21,70 @@ export default function SettingsList() {
 
     return (
         <List
-            sx={{ width: '22rem', bgcolor: 'white' }}
+            sx={{ width: '22rem', bgcolor: 'white', overflow: 'auto', height: '30rem' }}
             component="nav"
             aria-labelledby="nested-list-subheader"
-            subheader={
-                <ListSubheader component="div" id="nested-list-subheader">
-                    Nested List Items
-                </ListSubheader>
-            }
         >
+            <ListItemButton>
+                <ListItemIcon>
+                    <SendIcon />
+                </ListItemIcon>
+                <ListItemText primary="Sent mail" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <DraftsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Drafts" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <SendIcon />
+                </ListItemIcon>
+                <ListItemText primary="Sent mail" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <DraftsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Drafts" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <SendIcon />
+                </ListItemIcon>
+                <ListItemText primary="Sent mail" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <DraftsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Drafts" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <SendIcon />
+                </ListItemIcon>
+                <ListItemText primary="Sent mail" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <DraftsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Drafts" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <SendIcon />
+                </ListItemIcon>
+                <ListItemText primary="Sent mail" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <DraftsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Drafts" />
+            </ListItemButton>
             <ListItemButton>
                 <ListItemIcon>
                     <SendIcon />

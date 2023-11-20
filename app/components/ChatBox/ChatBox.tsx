@@ -19,7 +19,7 @@ import Message from "@/app/components/Message/Message";
 
 
 // @ts-ignore
-export default function ChatBox({user, open, handleClose}) {
+export default function ChatBox({user, open, handleOpen}) {
 
     const [ body, setBody ] = useState('');
 
@@ -39,7 +39,7 @@ export default function ChatBox({user, open, handleClose}) {
                 open={open}
             >
                 <div className={"bar"}>
-                    <IconButton onClick={handleClose} sx={{marginLeft: '1rem'}}>
+                    <IconButton onClick={handleOpen} sx={{marginLeft: '1rem'}}>
                         <CloseIcon/>
 
                     </IconButton>

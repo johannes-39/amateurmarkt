@@ -24,6 +24,43 @@
 
 }
 
+.profilInfos {
+    position: fixed;
+
+    bottom: 0;
+}
+.name {
+    font-family: Consolas;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.vereinposi {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.verein {
+    background-color: white;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.position {
+    background-color: white;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .img {
     width: 100%;

@@ -12,12 +12,10 @@ import ChatBox from "@/app/components/ChatBox/ChatBox";
 export default function ChatList() {
 
     const [open, setOpen] = React.useState(false);
-    const handleClose = () => {
-        setOpen(false);
-    };
+
 
     const handleOpen = () => {
-        setOpen(true);
+        setOpen(!open);
     }
     return (
         <Box sx={{ maxHeight: '30rem', overflow: 'auto'}}>
@@ -42,7 +40,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
-                <ChatBox user={"testuser1"} open={open} handleClose={handleClose}/>
+                <ChatBox user={"testuser1"} open={open} handleOpen={handleOpen}/>
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">
@@ -87,7 +85,7 @@ export default function ChatList() {
                         </React.Fragment>
                     }
                 />
-            <ChatBox user={"testuser"} open={open} handleClose={handleClose}/>
+            <ChatBox user={"testuser"} open={open} handleOpen={handleOpen}/>
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">
