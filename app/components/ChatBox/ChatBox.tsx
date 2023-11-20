@@ -41,7 +41,6 @@ export default function ChatBox({user, open, handleOpen}) {
                 <div className={"bar"}>
                     <IconButton onClick={handleOpen} sx={{marginLeft: '1rem'}}>
                         <CloseIcon/>
-
                     </IconButton>
                 </div>
                 <div className={"chatcomp"}>
