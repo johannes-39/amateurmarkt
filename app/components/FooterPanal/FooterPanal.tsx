@@ -47,9 +47,9 @@ const IconTabs:React.FC<any> =  () => {
             <TabsBody
                 className={"mybody"}
                 animate={{
-                    initial: { y: 0 },
+                    initial: { y: 250 },
                     mount: { y: 0 },
-                    unmount: { y: 0 },
+                    unmount: { y: 250 },
                 }}>
                 <TabPanel key={"swiper"} value={"swiper"}>
                     <Swiper/>

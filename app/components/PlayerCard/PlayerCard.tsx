@@ -10,7 +10,7 @@ const PlayerCard:React.FC<any> =  ({name, verein, position}) => {
     return (
         <div className={"divBodyBox"}>
             <div className={'divBody'}>
-                <div  className={'divCard'}><Image className={'img'} src={image} alt="blog"/></div>
+                <div className={'divCard'}><Image className={'img'} src={image} alt="blog"/></div>
                 <div className={"profilInfos"}>
                     <h2 className={"name"}>{name}</h2>
                     <div className={"vereinposi"}>
